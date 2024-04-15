@@ -1,20 +1,20 @@
 module.exports = {
   meta: {
-    title: "My Purple Blog",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    title: "VS Code网",
+    description: "VS Code，便利你的代码生活。",
     lang: "en",
     siteUrl: "https://example.com/",
   },
   feed: { // used in feed.xml.njk
-    subtitle: "Lorem ipsum dolor sit amet consecuteor",
+    subtitle: "Good!",
     filename: "atom.xml",
     path: "/atom.xml",
     id: "https://example.com/",
-    authorName: "John Doe",
-    authorEmail: "johndoe@example.com"
+    authorName: "Ice Flow",
+    authorEmail: "iceflow0798@outlook.com"
   },
   hero: { // used in hero section of main page ie. index.html.njk
-    title: "Welcome to my purple blog",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores accusantium deserunt odio esse."
+    title: "欢迎来到VS Code网！",
+    description: "VS Code，便利你的代码生活。 它是你的必须调味品。"
   }
 }

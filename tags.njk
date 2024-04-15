@@ -19,12 +19,12 @@ permalink: /tags/{{ tag | slug }}/
 {% block content %}
 
 <div class="container">
-  <h1>Tagged “{{ tag }}”</h1>
+  <h1>带有 “{{ tag }}” 标签</h1>
 
   {% set posts = collections[tag] %}
   {% include 'components/postslist.njk' %}
 
-  <p>See <a href="{{ '/tags/' | url }}">all tags</a>.</p>
+  <p>查看<a href="{{ '/tags/' | url }}">所有的标签</a>.</p>
 </div>
 
 {% endblock %}

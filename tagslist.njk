@@ -1,16 +1,18 @@
 ---
-title: List of all tags
+title: 标签列表
 layout: layouts/base.njk
 permalink: /tags/
 eleventyNavigation:
-  key: Tags
+  key: 标签
   weight: 1
 ---
 
 <div class="container">
 
-  <h1>All Tags</h1>
+  <h1>所有标签</h1>
 
+  因用户界面渲染器本身的问题，所有文章的标签不能设置成中文或日文。
+  
   <div class="card-grid">
     {% for tag in collections.tagList %}
     <div class="card">

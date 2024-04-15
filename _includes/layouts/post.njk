@@ -2,13 +2,13 @@
 layout: layouts/base.njk
 ---
 
-<div class="container-sm">
+<div class="container">
   <h1>{{ title }}</h1>
   {{ content | safe }}
 
   <br><hr>
   {% if not hideTagsList %}
-    <b>Tags: </b>
+    <b>标签: </b>
     {% for tag in tags %}
       {% if tag != 'post' %}
         <a href="{{ '/tags/' | url }}{{ tag | slug }}">{{ tag }}</a>
@@ -17,5 +17,5 @@ layout: layouts/base.njk
     {% endfor %}
   {% endif %}
   <br><br>
-  <a href="{{ '/' | url }}">&larr; Back home</a>
+  <a href="{{ '/' | url }}">&larr; 回到主页</a>
 </div>

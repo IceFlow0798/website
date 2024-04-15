@@ -1,6 +1,6 @@
 ---
 eleventyComputed:
-  title: "{% if pagination.pageNumber > 0 %}Page {{ pagination.pageNumber + 1 }}{% else %}Homepage{% endif %}"
+  title: "{% if pagination.pageNumber > 0 %}Page {{ pagination.pageNumber + 1 }}{% else %}主页{% endif %}"
 layout: layouts/base.njk
 permalink: /{% if pagination.pageNumber > 0 %}page-{{ pagination.pageNumber + 1 }}/{% endif %}
 pagination:
@@ -9,7 +9,7 @@ pagination:
   alias: posts
   reverse: true
 eleventyNavigation:
-  key: Home
+  key: 主页
   weight: 0
 ---
 
@@ -33,7 +33,7 @@ eleventyNavigation:
   </div>
 
   <h2 class="section-title">
-    Latest Posts
+    Recent Posts
     {%- if pagination.pageNumber != 0 %} - Page {{ pagination.pageNumber + 1 }}{% endif %}
   </h2>
   {% include "components/postslist.njk" %}

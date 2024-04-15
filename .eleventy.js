@@ -2,6 +2,7 @@ const { DateTime } = require('luxon')
 const navigationPlugin = require('@11ty/eleventy-navigation')
 const rssPlugin = require('@11ty/eleventy-plugin-rss')
 
+
 module.exports = (config) => {
   config.addPlugin(navigationPlugin);
   config.addPlugin(rssPlugin);
