@@ -11,7 +11,7 @@ eleventyNavigation:
 
   <h1>所有标签</h1>
 
-  因用户界面渲染器本身的问题，所有文章的标签不能设置成中文或日文。
+  当前找到了不支持中文标签的源头（slugify）并对tags.njk进行了修改。正在优化标签，需要一点时间。
   
   <div class="card-grid">
     {% for tag in collections.tagList %}

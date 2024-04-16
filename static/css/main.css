@@ -12,7 +12,7 @@ body {
 }
 body.dark {
   color: #fff;
-  background-color: #333;
+  background-color: rgba(0,0,0,0.9);
 }
 img {
   width: 100%;
