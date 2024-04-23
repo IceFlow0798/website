@@ -11,13 +11,11 @@ eleventyNavigation:
 
   <h1>所有标签</h1>
 
-  当前找到了不支持中文标签的源头（slugify）并对tags.njk进行了修改。正在优化标签，需要一点时间。
-  
   <div class="card-grid">
     {% for tag in collections.tagList %}
     <div class="card">
       <h2 class="card__title"><a href="{{ '/tags/' | url }}{{ tag.tagName | slug }}">{{ tag.tagName }}</a></h2>
-      <div class="card__subtitle">{{ tag.tagCount }} Posts</div>
+      <div class="card__subtitle">{{ tag.tagCount }} 篇文章</div>
     </div>
     {% endfor %}
   </div>
