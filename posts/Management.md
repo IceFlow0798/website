@@ -1,73 +1,54 @@
 ---
-title: 以Code为开发者用户界面，利用git和Github实现源代码管理
-date: 2023-12-16
-tags: 
-  - Github
-  - git
-  - 源码
-  - 管理
+    title: 源码管理1-常用步骤
+    date: 2023-12-05
+    tags:
+        - git
+        - 源码管理
+        - 仓库
 ---
-
-
-VSCode的左侧边栏提供了源代码管理这个选项，使用它能很好的帮助我们使用git进行管理，这里介绍下VSCode运用GitHub实现源代码管理
-![1-5-1](../pictures/1-5/1-5-1.jpg)
-
-## 准备工具
-
-1. 安装git并添加到环境变量。
-
-- Git安装教程：https://blog.csdn.net/qq_43715354/article/details/108638061%20
-
-2. 安装Code
 
 ## 基本流程
 
+前面的文章提到过，Git的基本工作流程包括：
+
+- 修改：在本地代码库中进行更改。  
+- 暂存：选择特定更改加入下一次提交。  
+- 提交：将暂存的更改保存到本地代码库。  
+- 推送：将本地的更改推送到远程代码库。  
+
 ### 创建仓库
 进入github官网，注册，登录，在右上角添加一个仓库(repository)
-![1-5-2](../pictures/1-5/1-5-2.jpg)
+![1](../pictures/posts/Management/1.jpg)
 
 下面是一个 repository 最基本的信息，我们需要清楚了解每一个都是什么意思。配置完每个参数之后，我们就可以创建仓库。
-![1-5-3](../pictures/1-5/1-5-3.png)
+![2](../pictures/posts/Management/2.png)
 
 生成仓库的基本结构
-![1-5-4](../pictures/1-5/1-5-4.jpg)
+![3](../pictures/posts/Management/3.jpg)
 
 在本地创建一个文件夹，用来接受test这个仓库内部的文件，也就是clone操作
-![1-5-5](../pictures/1-5/1-5-5.jpg)
-
-### Git安装
-
-安装完git之后重启VSCode，源代码管理栏就会变成如下情况
-![1-5-6](../pictures/1-5/1-5-6.jpg)
-配置账号和密码，全局
-
-```js
-git config --global user.email "you@example.com"
-git config --global user.name "Your Name"
-```
-
-![1-5-7](../pictures/1-5/1-5-7.jpg)
+![4](../pictures/posts/Management/4.jpg)
 
 ### VSCode绑定GitHub
 
 点击“发布到GitHub”，然后会跳转到网页处，输入账号密码登录GitHub
-![1-5-8](../pictures/1-5/1-5-8.jpg)
+![5](../pictures/posts/Management/5.jpg)
 
 点击 Continue ，这样我们的VSCode就会和GitHub关联起来了，然后点击打开
-![1-5-9](../pictures/1-5/1-5-9.jpg)
+![6](../pictures/posts/Management/6.jpg)
 
 这时候会跳回 VSCode，询问是否关联起来，点击 Open
-![1-5-10](../pictures/1-5/1-5-10.jpg)
+![7](../pictures/posts/Management/7.jpg)
 
 关联成功之后就可以看到账户里连接到了GitHub
-![1-5-11](../pictures/1-5/1-5-11.jpg)
+![8](../pictures/posts/Management/8.jpg)
 
 ### 基础知识
 
 clone意思就是把GitHub上的仓库文件，克隆到本地，方便我们进行代码的修改或迭代
-![1-5-12](../pictures/1-5/1-5-12.jpg)
+![9](../pictures/posts/Management/9.jpg)
 
-点击“初始化仓库”，这时候就会切换界面到达监视区![1-5-13](../pictures/1-5/1-5-13.png)
+点击“初始化仓库”，这时候就会切换界面到达监视区![10](../pictures/posts/Management/10.png)
 
 显示“源代码管理”的bar右侧有五个选项，分别为：**查看形式**：可以选择文件排列形式
 **提交**：用来提交版本信息到达本地仓库
@@ -77,13 +58,13 @@ clone意思就是把GitHub上的仓库文件，克隆到本地，方便我们进
 拉取请求的产生，说明了你对代码做出的更改和对代码建设工程做出的贡献，它会将你更改的部分和原来的部分进行对比并进行展示。
 
 **更多操作...**的界面如下
-![1-5-14](../pictures/1-5/1-5-14.jpg)
+![11](../pictures/posts/Management/11.jpg)
 拉取：从仓库获得文件
 推送：文件上传至仓库
 克隆：仓库整体克隆到本地中
 
 左下角部分显示内容（从左至右）：
-![1-5-15](../pictures/1-5/1-5-15.jpg)
+![12](../pictures/posts/Management/12.jpg)
 **分支结构**：名为master的分支结构
 **云端信息**：上传与下载的次数
 **问题**：错误和警告
@@ -94,62 +75,33 @@ clone意思就是把GitHub上的仓库文件，克隆到本地，方便我们进
 **Clone**
 
 整体仓库克隆到本地当中
-![1-5-16](../pictures/1-5/1-5-16.jpg)
-![1-5-17](../pictures/1-5/1-5-17.jpg)
+![13](../pictures/posts/Management/13.jpg)
+![14](../pictures/posts/Management/14.jpg)
 
 权限问题，点击允许，将会跳到一个GitHub授权画面，同理VSCode默认也要授权
-![1-5-18](../pictures/1-5/1-5-18.png)
-![1-5-19](../pictures/1-5/1-5-19.jpg)
-![1-5-20](../pictures/1-5/1-5-20.jpg)
-![1-5-21](../pictures/1-5/1-5-21.png)
+![15](../pictures/posts/Management/15.png)
+![16](../pictures/posts/Management/16.jpg)
+![17](../pictures/posts/Management/17.jpg)
+![18](../pictures/posts/Management/18.png)
 
 由于我建立的仓库是私有的，所以最好手动输全，由GitHub 用户名/工程名
-![1-5-22](../pictures/1-5/1-5-22.jpg)
-![1-5-23](../pictures/1-5/1-5-23.jpg)
+![19](../pictures/posts/Management/19.jpg)
+![20](../pictures/posts/Management/20.jpg)
 
 询问是否打开仓库，点击 Open，将会重启 VSCode进入克隆好的仓库内部
-![1-5-24](../pictures/1-5/1-5-24.jpg)
+![21](../pictures/posts/Management/21.jpg)
 
 **Commit**
 clone 成功之后，我们就可以在上面进行代码的修改等操作了，操作完之后，想要再保存版本，我们就需要分为两步，第一步，把代码信息上传到本地库当中，有两个隐藏文件是会保存版本信息的。第二步，保存的是本地的信息，我们还需要把本地库上传到 GitHub上面
 
 新建两个文件，里面无内容，然后 commit(提交)
-![1-5-25](../pictures/1-5/1-5-25.jpg)
-![1-5-26](../pictures/1-5/1-5-26.jpg)
+![22](../pictures/posts/Management/22.jpg)
+![23](../pictures/posts/Management/23.jpg)
 
 增加版本信息，写越全越好，方便后期主机回头查看，之前显示已修改的文件此时同步到本地仓库了。
 
 **push**
 接下来准备把本地仓库内容，Push 到GitHub上面，最终我们可以在 GitHub 网站看到自己的库，如果你只是做个人的开发，可以选择不 Push，直接在把库保存在本地
-![1-5-27](../pictures/1-5/1-5-27.jpg)
-![1-5-28](../pictures/1-5/1-5-28.png)
-![1-5-29](../pictures/1-5/1-5-29.jpg)
-
-### 回滚版本
-之前我们就有记录了版本信息，默认也会给我们添加一个版本号，那如何查找我们版本号呢？通过 Git 终端，输入指令查找提交记录
-
-```git
-git reflog
-```
-
-黄色的字，就是当时提交的版本号
-![1-5-30](../pictures/1-5/1-5-30.jpg)
-然后我们在输入对应想恢复的版本号，代码就能够回去了。
-
-```git
-git reset --hard 版本号
-```
-
-![1-5-31](../pictures/1-5/1-5-31.png)
-
-## 关闭源代码管理
-
-因为下载的项目很多，导致源代码要管理数千个文件，一旦改动一个文件，就导致Code“假死”，卡住不动，这里介绍一个简单的方法。
-打开使用了源代码管理的文件夹，删除.git文件，重启VSCode：
-![1-5-32](../pictures/1-5/1-5-32.jpg)
-
-此时源代码管理栏就会变成如下样式：
-![1-5-33](../pictures/1-5/1-5-33.jpg)
-
-你可以在设置中关闭自动搜索。
-![1-5-34](../pictures/1-5/1-5-34.jpg)
+![24](../pictures/posts/Management/24.jpg)
+![25](../pictures/posts/Management/25.png)
+![26](../pictures/posts/Management/26.jpg)

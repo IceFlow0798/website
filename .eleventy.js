@@ -8,9 +8,9 @@ module.exports = (config) => {
 
     config.addPassthroughCopy('css');
     config.addPassthroughCopy('static');
-    config.addPassthroughCopy("posts/pictures");
-    config.addPassthroughCopy("extensions/pictures");
-  
+    config.addPassthroughCopy({"pictures/posts": "posts/pictures/posts"});
+    config.addPassthroughCopy({"pictures/extensions": "extensions/pictures/extensions"});
+
     config.setDataDeepMerge(true);
 
     config.addFilter('htmlDateString', (dateObj) => {

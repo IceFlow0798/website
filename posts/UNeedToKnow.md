@@ -1,8 +1,9 @@
 ---
-title: 码码前的一些准备
+title: 码码前，你需要了解这些！
 date: 2023-11-16
 tags:
-  - 准备工作
+  - Snippets
+  - Editorconfig
 ---
 
 
@@ -11,7 +12,7 @@ tags:
 **简单介绍**
 snippets（代码块），在我们日常工作中存在大量重复代码编写，这时可以使用snippets直接调用已经封装好的模板代码，这样做能极大提高编程效率。
 
-![1-4-1](../pictures/1-4/1-4-1.gif)
+![1](../pictures/posts/UNeedToKnow/1.gif)
 
 另外，关于Vscode snippets的相关使用：
 
@@ -22,16 +23,16 @@ snippets（代码块），在我们日常工作中存在大量重复代码编写
 ### snippets插件
 
 JavaScript (ES6) code snippets：ES6语法智能提示，以及快速输入，不仅仅支持``.js``，还支持``.ts``，``.jsx``，``.tsx``，``.html``，``.vue``，省去了配置其支持各种包含js代码文件的时间。
-![1-4-2](../pictures/1-4/1-4-2.jpg)
+![2](../pictures/posts/UNeedToKnow/2.jpg)
 
 Vue 3 Snippets：包含了所有的Vue.js 2和Vue.js 3的api对应的代码片段。
-![1-4-3](../pictures/1-4/1-4-3.jpg)
+![3](../pictures/posts/UNeedToKnow/3.jpg)
 
 Vue Vscode Snippets：[https://www.its301.com/article/qq_41107231/117195087](https://www.its301.com/article/qq_41107231/117195087)
-![1-4-4](../pictures/1-4/1-4-4.jpg)
+![4](../pictures/posts/UNeedToKnow/4.jpg)
 
 Simple React Snippets：[https://www.jianshu.com/p/c141b89e5808](https://www.jianshu.com/p/c141b89e5808)
-![1-4-5](../pictures/1-4/1-4-5.jpg)
+![5](../pictures/posts/UNeedToKnow/5.jpg)
 
 ### 创建你自己的Snippets
 
@@ -42,7 +43,7 @@ Simple React Snippets：[https://www.jianshu.com/p/c141b89e5808](https://www.jia
 
 如果是创建 snippets 选择 选择 New Global Snippets file ，输入你要创面的 snippets name 即可进入配置
 snippets 文件是 JSON 风格，刚创建后的默认格式内容如下：
-![1-4-6](../pictures/1-4/1-4-6.png)
+![6](../pictures/posts/UNeedToKnow/6.png)
 
 - scope：限定代码段的作用域，例如 go 语言的代码段不会出现在 js 中，反之亦然
 - prefix：是快捷关键字，当 VSCode 检测到代码中出现 prefix 关键字就会在编辑器中替换为 body 的内容

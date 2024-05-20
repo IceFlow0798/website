@@ -12,19 +12,19 @@ pagination:
     - categoryList
   addAllPagesToCollections: true
 eleventyComputed:
-  title: Categorized “{{ category.categoryName }}”
-permalink: /categories/{{ category.categoryName }}/
+  title: “{{ category.categoryName }}”扩展
+permalink: /categorieslist/{{ category.categoryName }}/
 ---
 
 {% block content %}
 
 <div class="container">
-  <h1>归属于“{{ category.categoryName }}” 分类</h1>
+  <h1>“{{ category.categoryName }}” 分类</h1>
 
   {% set extensions = category.posts %}
   {% include 'components/extensionslist.njk' %}
 
-  <p>查看<a href="{{ '/extensions/' | url }}">所有的分类</a>.</p>
+  <p>查看<a href="{{ '/categorieslist/' | url }}">所有的分类</a>。</p>
 </div>
 
 {% endblock %}

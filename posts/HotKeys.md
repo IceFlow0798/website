@@ -1,9 +1,11 @@
 ---
-title: VSCode热键一览
-tags: 
-  - 热键
-date: 2024-01-28
+    title: VSCode热键一览
+    date: 2024-01-28
+    tags: 
+        - 热键
 ---
+
+先写一些常见的。官方原生的较全面的热键图我也附在下方了。
 
 ### 全局
 
@@ -45,5 +47,5 @@ date: 2024-01-28
 |``Shift+Alt+A``|添加块注释框架，光标定位到注释本体位置|
 |``Alt+Z``|切换自动换行|
 
-更多的（官网英文版）如下：
-![HotKeys](../pictures/1-7/HotKeys.png)
+更多的（官网英文版）如下：  
+![HotKeys](../pictures/posts/HotKeys/HotKeys.png)

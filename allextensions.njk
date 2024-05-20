@@ -1,0 +1,37 @@
+---
+layout: layouts/base.njk
+permalink: /extensions/
+title: 所有推荐扩展
+eleventyNavigation:
+  key: 扩展
+  weight: 1
+  
+---
+
+<div class="container">
+    <h1>所有推荐扩展</h1>
+    <div class="card-grid">
+        {% for post in collections.all %}
+            {% if post.data.icon %}
+                <div class="card">
+                    <img src="/extensions/{{ post.data.icon }}" alt="{{ post.data.title }} icon" class="card__icon">
+                    <h2 class="card__title">
+                        <a href="{{ post.url }}">{{ post.data.title }}</a>
+                    </h2>
+                    <div class="card__categories">
+                    {% for category in post.data.categories %}
+                        {% if category != "extensions" %}
+                            {% if loop.index <= 4 %}
+                                <a href="/categorieslist/{{ category }}" class="card__category">{{ category }}</a>
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                    {% if post.data.categories.length > 4 %}
+                        <a href="/categorieslist/" class="card__category">更多...</a>
+                    {% endif %}
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>

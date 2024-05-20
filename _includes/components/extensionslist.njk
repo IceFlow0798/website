@@ -1,18 +1,19 @@
 <div class="card-grid">
-  {% for extension in extensions %}
-    <div class="card">
-      <h3 class="card__title">
-        <a href="{{ extension.url | url }}">{{ extension.data.title }}</a>
-      </h3>
-      <p class="card__date">{{ extension.date | readableDate }}</p>
-      <p class="card__description">{{ extension.data.description }}</p>
-      <p class="card__subtitle">分类:</p>
-      <div class="card__categories">
-        {% for category in extension.data.categories %}
-          <a href="{{ '/categories/' | url }}{{ category }}">{{ category }}</a>
-          {%- if not loop.last %}, {% endif %}
-        {% endfor %}
-      </div>
-    </div>
-  {% endfor %}
+    {% for extension in extensions %}
+        <div class="card">
+        <h3 class="card__title">
+            <img src="/extensions/{{ extension.data.icon }}" alt="{{ extension.data.title }} icon" class="card__icon">
+            <a href="{{ extension.url | url }}">{{ extension.data.title }}</a>
+        </h3>
+        <p class="card__description">{{ extension.data.description }}</p>
+        <p class="card__subtitle">分类:</p>
+        <div class="card__categories">
+            {% for category in extension.data.categories %}
+                {% if category != "extensions" %}
+                    <a href="{{ '/categories/' | url }}{{ category }}">{{ category }}</a>
+                {% endif %}
+            {% endfor %}
+        </div>
+        </div>
+    {% endfor %}
 </div>

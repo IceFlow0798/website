@@ -1,10 +1,7 @@
 ---
 title: 扩展
 layout: layouts/base.njk
-permalink: /extensions/
-eleventyNavigation:
-  key: 扩展
-  weight: 1
+permalink: /categorieslist/
 ---
 
 <div class="container">
@@ -13,7 +10,7 @@ eleventyNavigation:
     {% for category in collections.categoryList %}
       <div class="card">
         <h2 class="card__title">
-          <a href="{{ '/categories/' | url }}{{ category.categoryName }}">{{ category.categoryName }}</a>
+          <a href="{{ '/categorieslist/' | url }}{{ category.categoryName }}">{{ category.categoryName }}</a>
           <span class="card__count">({{ category.categoryCount }} 个扩展)</span>
         </h2>
         <ul>

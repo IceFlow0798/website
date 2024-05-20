@@ -12,14 +12,14 @@ pagination:
     - tagListD
   addAllPagesToCollections: true
 eleventyComputed:
-  title: Tagged “{{ tag }}”
+  title: “{{ tag }}”标签
 permalink: /tags/{{ tag }}/
 ---
 
 {% block content %}
 
 <div class="container">
-  <h1>带有 “{{ tag }}” 标签</h1>
+  <h1>带有 “{{ tag }}” 标签的文章</h1>
 
   {% set posts = collections[tag] %}
   {% include 'components/postslist.njk' %}
