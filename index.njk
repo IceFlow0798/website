@@ -39,10 +39,10 @@ eleventyNavigation:
   {% include "components/postslist.njk" %}
   <div class="pagination">
       {% if pagination.previous %}
-        <a href="{{ pagination.href.previous | url }}" class="pagination__prev">&larr; Prev Page</a>
+        <a href="{{ pagination.href.previous | url }}" class="pagination__prev">&larr; 上一页</a>
       {% endif %}
       {% if pagination.next %}
-        <a href="{{ pagination.href.next | url }}" class="pagination__next">Next Page &rarr;</a>
+        <a href="{{ pagination.href.next | url }}" class="pagination__next">下一页 &rarr;</a>
       {% endif %}
   </div>
 </div>

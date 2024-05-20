@@ -3,19 +3,27 @@ layout: layouts/base.njk
 ---
 
 <div class="container">
-  <h1>{{ title }}</h1>
-  {{ content | safe }}
+    <h1>{{ title }}</h1>
+    <br>
+    {% if not hideTagsList %}
+        <b>标签: </b>
+        {% for tag in tags %}
+            {% if tag != 'post' %}
+                <a href="{{ '/tags/' | url }}{{ tag }}">{{ tag }}</a>
+                {%- if not loop.last %}, {% endif %}
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+    <br><hr>
 
-  <br><hr>
-  {% if not hideTagsList %}
-    <b>标签: </b>
-    {% for tag in tags %}
-      {% if tag != 'post' %}
-        <a href="{{ '/tags/' | url }}{{ tag | slug }}">{{ tag }}</a>
-        {%- if not loop.last %}, {% endif %}
-      {% endif %}
-    {% endfor %}
-  {% endif %}
-  <br><br>
-  <a href="{{ '/' | url }}">&larr; 回到主页</a>
+    {{ content | safe }}
+    <script src="https://utteranc.es/client.js"
+            repo="IceFlow0798/Code-site-comments"
+            issue-term="title"
+            theme="github-dark"
+            crossorigin="anonymous"
+            async>
+    </script>
+    <br><br>
+    <a href="{{ '/' | url }}">&larr; 回到主页</a>
 </div>

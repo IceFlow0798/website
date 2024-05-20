@@ -3,18 +3,17 @@ title: 标签列表
 layout: layouts/base.njk
 permalink: /tags/
 eleventyNavigation:
-  key: 标签
+  key: 文章
   weight: 1
 ---
 
 <div class="container">
 
   <h1>所有标签</h1>
-
   <div class="card-grid">
     {% for tag in collections.tagList %}
     <div class="card">
-      <h2 class="card__title"><a href="{{ '/tags/' | url }}{{ tag.tagName | slug }}">{{ tag.tagName }}</a></h2>
+      <h2 class="card__title"><a href="{{ '/tags/' | url }}{{ tag.tagName }}">{{ tag.tagName }}</a></h2>
       <div class="card__subtitle">{{ tag.tagCount }} 篇文章</div>
     </div>
     {% endfor %}

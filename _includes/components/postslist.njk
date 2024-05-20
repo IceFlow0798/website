@@ -6,11 +6,11 @@
       </h3>
       <p class="card__date">{{ post.date | readableDate }}</p>
       <p class="card__description">{{ post.data.description }}</p>
-      <p class="card__subtitle">Tags:</p>
+      <p class="card__subtitle">标签:</p>
       <div class="card__tags">
         {% for tag in post.data.tags %}
           {% if tag != 'post' %}
-            <a href="{{ '/tags/' | url }}{{ tag | slug }}">{{ tag }}</a>
+            <a href="{{ '/tags/' | url }}{{ tag }}">{{ tag }}</a>
             {%- if not loop.last %}, {% endif %}
           {% endif %}
         {% endfor %}

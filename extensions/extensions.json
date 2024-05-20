@@ -1,0 +1,6 @@
+{
+    "layout": "layouts/extensions.njk",
+    "categories": [
+      "extensions"
+    ]
+}

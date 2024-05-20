@@ -1,0 +1,28 @@
+---
+layout: layouts/base.njk
+---
+
+<div class="container">
+  <h1>
+    {% if icon %}
+      <img src="../{{ icon }}" alt="图标" style="width: auto; height: 70px;"/>
+    {% endif %}
+    {{ title }}
+  </h1>
+  <br>
+  {% if not hideCategoriesList %}
+    <b>扩展分类: </b>
+    {% for category in categories %}
+      {% if category != "extensions" %}
+      <a href="{{ '/categories/' | url }}{{ category }}">{{ category }}</a>
+      {%- if not loop.last %}, {% endif %}
+      {% endif%}
+    {% endfor %}
+  {% endif %}
+  <br><hr>
+
+  {{ content | safe }}
+
+  <br><br>
+  <a href="{{ '/' | url }}">&larr; 回到主页</a>
+</div>
